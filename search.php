@@ -26,8 +26,8 @@
 	if (!mysqli_query($link, $sql)) {
 		die('Error: ' . mysqli_error($link));
 	}
-	$results = mysqli_query($sql) or die(mysqli_error($link));
-	echo $results;
+	$results = mysqli_query($sql);
+	printf( $results);
 	
 	mysqli_close($link);
 ?>
