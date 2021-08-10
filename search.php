@@ -22,6 +22,13 @@
 		die('Cannot access' . DB_NAME . ': ' . mysqli_error());
 	}
 	
+	$query = $_GET['query']; 
+	// gets value sent over search form
+	$sql= "SELECT * FROM test_data WHERE `username` LIKE '%" . $query . "%'"
+	$raw_results = mysqli_query($link, $sql);
+	if (!$raw_results) {
+		die('Cannot get data ': ' . mysqli_error());
+	}
 ?>
 </body>
 </html>
