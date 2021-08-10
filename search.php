@@ -21,7 +21,7 @@
 </head>
 <body>
 <?php
-	$query = $_GET['query']; 
+	$query = $_GET["query"]; 
 	// gets value sent over search form
 	
 		
@@ -39,7 +39,7 @@
 			while($results = mysql_fetch_array($raw_results)){
 			// $results = mysql_fetch_array($raw_results) puts data from database into array, while it's valid it does the loop
 			
-				echo "<p><h3>".$results['title']."</h3>".$results['text']."</p>";
+				echo "<p><h3>".$results['username']."</h3></p>";
 				// posts results gotten from database(title and text) you can also show id ($results['id'])
 			}
 			
