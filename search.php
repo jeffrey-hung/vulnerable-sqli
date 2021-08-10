@@ -26,7 +26,7 @@
 		die('Error: ' . mysqli_error($link));
 	}
 	
-	$test = mysqli_query($link, $sql);
+	$test = mysqli_query($link, "SELECT * from test_data");
 	echo $test;
 	
 	mysqli_close($link);
