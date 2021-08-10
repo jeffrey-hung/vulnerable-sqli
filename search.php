@@ -7,7 +7,6 @@
 </head>
 <body>
 <?php
-	ini_set('display_errors', 1); error_reporting(-1);
 	/* Attempt MySQL server connection. Assuming you are running MySQL
 	server with default setting (user 'root' with no password) */
 	$link = mysqli_connect("localhost", "root", "root", "test_db");
@@ -17,8 +16,9 @@
 		die("ERROR: Could not connect. " . mysqli_connect_error());
 	}
 	$sql = "SELECT username FROM test_data;";
-	$result = mysqli_query($link, $sql);
-	echo $result;
+	if (!mysqli_query($link, $sql)) {
+		die('Error: ' . mysqli_error($link));
+	}	
 	
 </body> 
 </html>
