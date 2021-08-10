@@ -24,9 +24,6 @@
 	$param = $_GET['query'];
 	$sql = "SELECT * from test_data WHERE username=". $param .";";
 
-	if (!mysqli_query($link, $sql)) {
-		die('Error: ' . mysqli_error($link));
-	}
 	mysqli_close($link);
 ?>
 </body> 
