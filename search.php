@@ -27,9 +27,8 @@
 		die('Error: ' . mysqli_error($link));
 	}
 	$results = mysqli_query($link, $sql);
-	$row = mysql_fetch_array($results)
-	echo $row['username']; // Print a single column data
-	echo print_r($row);       // Print the entire row data
+	$data = mysql_fetch_assoc($results);
+	echo $data[0];
 	
 	
 	mysqli_close($link);
