@@ -25,6 +25,11 @@
 	if (!mysqli_query($link, $sql)) {
 		die('Error: ' . mysqli_error($link));
 	}
+	
+	$test = mysqli_query($link, $sql);
+	echo $test;
+	
+	mysqli_close($link);
 ?>
 </body> 
 </html>
