@@ -16,11 +16,7 @@
 		die("ERROR: Could not connect. " . mysqli_connect_error());
 	}
 	
-	if ($result = mysqli_query($link, "SELECT * FROM test_data;")) {
-		echo "Returned rows are: " . $result;
-	}else{
-		echo "failed";
-	}
+
 
 ?>
 </body>
