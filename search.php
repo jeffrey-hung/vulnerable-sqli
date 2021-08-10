@@ -27,7 +27,10 @@
 		die('Error: ' . mysqli_error($link));
 	}
 	$results = mysqli_query($link, $sql);
-	echo "Returned rows are: " . mysqli_num_rows($results);
+	while($row = mysql_fetch_array($results)) {
+		echo $row['username']; // Print a single column data
+		echo print_r($row);       // Print the entire row data
+	}
 	
 	mysqli_close($link);
 ?>
