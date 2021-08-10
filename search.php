@@ -25,11 +25,10 @@
 
 	if (!mysqli_query($link, $sql)) {
 		die('Error: ' . mysqli_error($link));
-	}else{
-		echo "found";
 	}
 	$results = mysqli_query($sql) or die(mysqli_error($link));
-
+	echo $results;
+	
 	mysqli_close($link);
 ?>
 </body> 
