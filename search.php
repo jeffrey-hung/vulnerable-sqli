@@ -27,7 +27,7 @@
 		die('Error: ' . mysqli_error($link));
 	}
 	$results = mysqli_query($link, $sql);
-	echo "Returned rows are: " . $result;
+	echo "Returned rows are: " . $results;
 	
 	mysqli_close($link);
 ?>
