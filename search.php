@@ -28,8 +28,10 @@
 	}
 	$results = mysqli_query($link, $sql);
 	$data = mysqli_fetch_array($results);
-	echo $data[0];
 	
+	for ($i = 0; $i < count($data); $i++)  {
+		echo $data[$i] ."<br />";
+	}
 	
 	mysqli_close($link);
 ?>
