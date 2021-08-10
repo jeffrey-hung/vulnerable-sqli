@@ -20,7 +20,11 @@
 	if (!$db_selected) {
 		die('Cannot access: ' . mysqli_error($link));
 	}
+	$sql = "SELECT * from test_data;";
 
+	if (!mysqli_query($link, $sql)) {
+		die('Error: ' . mysqli_error($link));
+	}
 ?>
 </body> 
 </html>
