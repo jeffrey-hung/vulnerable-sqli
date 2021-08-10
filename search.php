@@ -7,6 +7,7 @@
 </head>
 <body>
 <?php
+	mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 	/* Attempt MySQL server connection. Assuming you are running MySQL
 	server with default setting (user 'root' with no password) */
 	$link = mysqli_connect("localhost", "root", "root");
@@ -27,6 +28,8 @@
 	}else{
 		echo "found";
 	}
+	$results = mysqli_query($sql) or die(mysqli_error($link));
+
 	mysqli_close($link);
 ?>
 </body> 
