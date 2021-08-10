@@ -21,7 +21,7 @@
 	if (!$db_selected) {
 		die('Cannot access: ' . mysqli_error($link));
 	}
-	$sql = "SELECT * from test_data";
+	$sql = "SELECT * from test_data WHERE username LIKE" . $_GET['query'];
 
 	if (!mysqli_query($link, $sql)) {
 		die('Error: ' . mysqli_error($link));
