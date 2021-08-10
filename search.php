@@ -1,15 +1,12 @@
 <?php
-	mysql_connect("localhost", "root", "root") or die("Error connecting to database: ".mysql_error());
-	/*
-		localhost - it's location of the mysql server, usually localhost
-		root - your username
-		third is your password
-		
-		if connection fails it will stop loading the page and display an error
-	*/
-	
-	mysql_select_db("test_db") or die(mysql_error());
-	/* test_db is the name of database we've created */
+/* Attempt MySQL server connection. Assuming you are running MySQL
+server with default setting (user 'root' with no password) */
+$link = mysqli_connect("localhost", "root", "root", "test_db");
+ 
+// Check connection
+if($link === false){
+    die("ERROR: Could not connect. " . mysqli_connect_error());
+}
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
