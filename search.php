@@ -21,12 +21,12 @@
 	if (!$db_selected) {
 		die('Cannot access: ' . mysqli_error($link));
 	}
-	$sql = "SELECT * from test_data;";
+	$sql = "SELECT * from test_data";
 
 	if (!mysqli_query($link, $sql)) {
 		die('Error: ' . mysqli_error($link));
 	}
-	$results = mysqli_query($sql);
+	$results = mysqli_query($link, $sql);
 	echo "Returned rows are: " . mysqli_num_rows($result);
 	
 	mysqli_close($link);
