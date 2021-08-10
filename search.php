@@ -22,11 +22,13 @@
 		die('Cannot access' . DB_NAME . ': ' . mysqli_error());
 	}
 	
-	if ($result = mysqli_query($con, "SELECT * FROM test_data")) {
-	echo "Returned rows are: " . mysqli_num_rows($result);
-	// Free result set
-	mysqli_free_result($result);
-}
+	if ($result = mysqli_query($con, "SELECT * FROM test_data;")) {
+		echo "Returned rows are: " . mysqli_num_rows($result);
+		// Free result set
+		mysqli_free_result($result);
+	}else{
+		echo "failed";
+	}
 
 ?>
 </body>
