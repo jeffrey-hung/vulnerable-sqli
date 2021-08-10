@@ -18,11 +18,11 @@ if($link === false){
 </head>
 <body>
 <?php
-	$query = $_GET["query"]; 
+	$query = $_GET['query']; 
 	// gets value sent over search form
-	
+	$sql= "SELECT * FROM test_data WHERE `username` LIKE '%" .$query. "%'"
 		
-	$raw_results = mysql_query("SELECT * FROM test_data WHERE `username` LIKE '%".$query."%'") or die(mysql_error());
+	$raw_results = mysqli_query($link, $sql) or die(mysql_error());
 			
 		// * means that it selects all fields, you can also write: `id`, `title`, `text`
 		// articles is the name of our table
