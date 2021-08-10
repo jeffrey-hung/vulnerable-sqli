@@ -21,18 +21,12 @@
 	if (!$db_selected) {
 		die('Cannot access: ' . mysqli_error($link));
 	}
-	$sql = "SELECT * from test_data WHERE username=". $_GET['query'];
+	$param = $_GET['query'];
+	$sql = "SELECT * from test_data WHERE username=". $param .";";
 
 	if (!mysqli_query($link, $sql)) {
 		die('Error: ' . mysqli_error($link));
 	}
-	$results = mysqli_query($link, $sql);
-	$data = mysqli_fetch_array($results);
-	
-	for ($i = 0; $i < count($data); $i++)  {
-		echo $data[$i] ."<br />";
-	}
-	
 	mysqli_close($link);
 ?>
 </body> 
