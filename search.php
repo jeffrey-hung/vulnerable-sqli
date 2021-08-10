@@ -21,6 +21,6 @@
 		die('Cannot access: ' . mysqli_error($link));
 	}
 
-
+?>
 </body> 
 </html>
