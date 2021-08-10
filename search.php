@@ -21,10 +21,6 @@
 		die('Cannot access: ' . mysqli_error($link));
 	}
 
-	//$sql = "SELECT username FROM test_data;";
-	//if (!mysqli_query($link, $sql)) {
-	//	die('Error: ' . mysqli_error($link));
-	//}	
-	
+
 </body> 
 </html>
