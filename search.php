@@ -23,9 +23,7 @@
 	}
 	
 	if ($result = mysqli_query($con, "SELECT * FROM test_data;")) {
-		echo "Returned rows are: " . mysqli_num_rows($result);
-		// Free result set
-		mysqli_free_result($result);
+		echo "Returned rows are: " . $result;
 	}else{
 		echo "failed";
 	}
