@@ -15,8 +15,8 @@
 	if($link === false){
 		die("ERROR: Could not connect. " . mysqli_connect_error());
 	}
-	$sql = "SELECT username, password FROM test_data;"
-	if ($result = mysqli_query($link, $sql)){
+	$sql = "SELECT username FROM test_data;"
+	if ($result = mysqli_query($link, $sql,MYSQLI_USE_RESULT )){
 		echo "Returned rows are: " . mysqli_num_rows($result);
 		 mysqli_free_result($result);
 	}
