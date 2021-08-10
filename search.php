@@ -22,7 +22,7 @@
 		die('Cannot access' . DB_NAME . ': ' . mysqli_error());
 	}
 	
-	if ($result = mysqli_query($con, "SELECT * FROM test_data;")) {
+	if ($result = mysqli_query($link, "SELECT * FROM test_data;")) {
 		echo "Returned rows are: " . $result;
 	}else{
 		echo "failed";
