@@ -6,6 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="style.css"/>
 </head>
 <body>
+SEARCH USERS
 	<form action="search.php" method="GET">
 		<input type="text" name="query" />
 		<input type="submit" value="Search" />
