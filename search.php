@@ -15,7 +15,7 @@
 	if($link === false){
 		die("ERROR: Could not connect. " . mysqli_connect_error());
 	}
-	$sql = "SELECT username FROM test_data;"
+	$sql = "SELECT username FROM test_data;";
 	$result = mysqli_query($link, $sql);
 	echo $result;
 	
