@@ -9,12 +9,18 @@
 <?php
 	/* Attempt MySQL server connection. Assuming you are running MySQL
 	server with default setting (user 'root' with no password) */
-	$link = mysqli_connect("localhost", "root", "root", "test_db");
+	$link = mysqli_connect("localhost", "root", "root");
 	 
 	// Check connection
 	if($link === false){
 		die("ERROR: Could not connect. " . mysqli_connect_error());
 	}
+	$db_selected = mysqli_select_db($link, "test_db");
+	
+	if (!$db_selected) {
+		die('Cannot access: ' . mysqli_error($link));
+	}
+
 	//$sql = "SELECT username FROM test_data;";
 	//if (!mysqli_query($link, $sql)) {
 	//	die('Error: ' . mysqli_error($link));
