@@ -9,14 +9,14 @@
 <?php
 	/* Attempt MySQL server connection. Assuming you are running MySQL
 	server with default setting (user 'root' with no password) */
-	$link = mysqli_connect("localhost", "root", "root");
+	$link = mysql_connect("localhost", "root", "root");
 	 
 	// Check connection
 	if($link === false){
 		die("ERROR: Could not connect. " . mysqli_connect_error());
 	}
 
-	$db_selected = mysqli_select_db($link, "test_db");
+	$db_selected = mysql_select_db($link, "test_db");
 
 	if (!$db_selected) {
 		die('Cannot access' . DB_NAME . ': ' . mysqli_error());
@@ -25,10 +25,8 @@
 	$query = $_GET['query']; 
 	// gets value sent over search form
 	$sql= "SELECT * FROM test_data WHERE `username` LIKE '%" . $query . "%'"
-	$raw_results = mysqli_query($link, $sql);
-	if (!$raw_results) {
-		die('Cannot get data ': ' . mysqli_error());
-	}
+	$raw_results = mysql_query($link,$sql);
+	echo $raw_results;
 ?>
 </body>
 </html>
