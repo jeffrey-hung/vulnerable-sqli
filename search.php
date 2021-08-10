@@ -24,11 +24,9 @@
 
 	if (!mysqli_query($link, $sql)) {
 		die('Error: ' . mysqli_error($link));
+	}else{
+		echo "found";
 	}
-	
-	$test = mysqli_query($link, "SELECT * from test_data");
-	echo $test;
-	
 	mysqli_close($link);
 ?>
 </body> 
