@@ -27,7 +27,7 @@
 		die('Error: ' . mysqli_error($link));
 	}
 	$results = mysqli_query($link, $sql);
-	$data = mysqli_fetch_assoc($results);
+	$data = mysqli_fetch_array($results);
 	echo $data[0];
 	
 	
