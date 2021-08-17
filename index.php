@@ -32,12 +32,16 @@ SEARCH USERS
 		}
 		$param = $_GET['query'];
 		$sql = "SELECT * from test_data WHERE username=\"". $param ."\";";
-		
 		echo $sql;
-		if ($result = mysqli_query($link, $sql)) {
-			echo "Returned rows are: " . mysqli_num_rows($result);
-			// Free result set
-			mysqli_free_result($result);
+		
+		$result = mysqli_query($link, $sql);
+		if (mysqli_num_rows($result) > 0) {
+			// output data of each row
+			while($row = mysqli_fetch_assoc($result)) {
+				echo "username: " . $row["username"]. " - Password: " . $row["password"]. "<br>";
+			}
+		} else {
+			echo "0 results";
 		}
 		mysqli_close($link);
 	
