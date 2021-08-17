@@ -19,7 +19,7 @@
 <?php
 	if(isset($_GET['reflected'])){
 		$xss = $_GET['reflected'];
-		echo xss;
+		echo $xss;
 	}
 	if(isset($_GET['query'])){
 		// Do something
