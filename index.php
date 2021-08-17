@@ -12,7 +12,16 @@ SEARCH USERS
 		<input type="submit" value="Search" />
 	</form>
 	
+ECHO ME
+	<form action="index.php" method="GET">
+		<input type="text" name="reflected" />
+		<input type="submit" value="Search" />
+	</form>
+	
 <?php
+	if(isset($_GET['reflected'])){
+		echo &reflected;
+	}
 	if(isset($_GET['query'])){
 		// Do something
 
