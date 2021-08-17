@@ -14,9 +14,13 @@
 	ECHO ME
 	<form action="index.php" method="GET">
 		<input type="text" name="reflected" />
-		<input type="submit" value="Search" />
+		<input type="submit" value="Echo" />
 	</form>
 <?php
+	if(isset($_GET['reflected'])){
+		$xss = $_GET['reflected'];
+		echo xss;
+	}
 	if(isset($_GET['query'])){
 		// Do something
 
