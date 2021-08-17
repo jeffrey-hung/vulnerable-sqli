@@ -34,6 +34,11 @@ SEARCH USERS
 		$sql = "SELECT * from test_data WHERE username=\"". $param ."\";";
 		
 		echo $sql;
+		if ($result = mysqli_query($link, $sql)) {
+			echo "Returned rows are: " . mysqli_num_rows($result);
+			// Free result set
+			mysqli_free_result($result);
+		}
 		mysqli_close($link);
 	
 	}
