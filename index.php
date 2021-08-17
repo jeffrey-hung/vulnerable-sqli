@@ -7,10 +7,10 @@
 </head>
 <body>
 SEARCH USERS
-	<form action="index.php" method="GET">
-		<input type="text" name="query" />
-		<input type="submit" value="Search" />
-	</form>
+<form action="index.php" method="GET">
+	<input type="text" name="query" />
+	<input type="submit" value="Search" />
+</form>
 	
 <?php
 	if(isset($_GET['query'])){
