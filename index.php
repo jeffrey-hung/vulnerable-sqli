@@ -20,7 +20,7 @@ ECHO ME
 	
 <?php
 	if(isset($_GET['reflected'])){
-		echo $reflected;
+		echo $_GET['reflected'];
 	}
 	if(isset($_GET['query'])){
 		// Do something
