@@ -6,12 +6,16 @@
 	<link rel="stylesheet" type="text/css" href="style.css"/>
 </head>
 <body>
-SEARCH USERS
+	SEARCH USERS
+		<form action="index.php" method="GET">
+			<input type="text" name="query" />
+			<input type="submit" value="Search" />
+		</form>
+	ECHO ME
 	<form action="index.php" method="GET">
-		<input type="text" name="query" />
+		<input type="text" name="reflected" />
 		<input type="submit" value="Search" />
 	</form>
-	
 <?php
 	if(isset($_GET['query'])){
 		// Do something
