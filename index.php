@@ -34,11 +34,10 @@ SEARCH USERS
 		$sql = "SELECT * from test_data WHERE username=\"". $param ."\";";
 		echo $sql;
 		
-		$result = mysqli_query($link, $sql);
+		$result = mysqli_multi_query($link, $sql);
 		if (mysqli_num_rows($result) > 0) {
 			// output data of each row
 			while($row = mysqli_fetch_assoc($result)) {
-				echo "username: " . $row["username"]. " - Password: " . $row["password"];
 				echo '<table>
 				   <tr><th>Username</th>
 				   <th>Password</th></tr>
