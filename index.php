@@ -19,9 +19,7 @@ ECHO ME
 	</form>
 	
 <?php
-	if(isset($_GET['reflected'])){
-		echo $_GET['reflected'];
-	}
+	
 	if(isset($_GET['query'])){
 		// Do something
 
