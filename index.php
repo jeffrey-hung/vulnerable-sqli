@@ -37,14 +37,14 @@ SEARCH USERS
 		$result = mysqli_query($link, $sql);
 		if (mysqli_num_rows($result) > 0) {
 			// output data of each row
-			while($row = mysqli_fetch_assoc($result)) {
-				echo '<table>
+			echo '<table>
 				   <tr><th>Username</th>
-				   <th>Password</th></tr>
-				   <tr><td>'.$row["username"].'</td>
-				   <td>'.$row["password"].'</td></tr>
-				</table>';
+				   <th>Password</th></tr>';
+			while($row = mysqli_fetch_assoc($result)) {
+				echo '<tr><td>'.$row["username"].'</td>
+				   <td>'.$row["password"].'</td></tr>'
 			}
+			echo '</table>';
 		} else {
 			echo "0 results";
 		}
