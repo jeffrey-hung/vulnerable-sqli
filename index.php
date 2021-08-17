@@ -31,7 +31,7 @@ SEARCH USERS
 			die('Cannot access: ' . mysqli_error($link));
 		}
 		$param = $_GET['query'];
-		$sql = "SELECT * from test_data WHERE username=\"". $param ."\";";
+		$sql = "SELECT * from test_data WHERE username=\"". $param ."\"";
 		echo $sql;
 		
 		$result = mysqli_multi_query($link, $sql);
