@@ -42,6 +42,8 @@ SEARCH USERS
 				echo '<table>
 				   <tr><th>Username</th></tr>
 				   <tr><td>'.$row["username"].'</td></tr>
+				    <tr><th>Password</th></tr>
+				   <tr><td>'.$row["password"].'</td></tr>
 				</table>';
 			}
 		} else {
