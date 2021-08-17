@@ -40,13 +40,6 @@ SEARCH USERS
 			while($row = mysqli_fetch_assoc($result)) {
 				echo "username: " . $row["username"]. " - Password: " . $row["password"];
 				echo '<table>
-				   <tr><th>Username</th></tr>
-				   <tr><td>'.$row["username"].'</td></tr>
-				    <tr><th>Password</th></tr>
-				   <tr><td>'.$row["password"].'</td></tr>
-				</table>';
-				
-				echo '<table style="width:100%">
 					  <tr>
 						<th>Username</th>
 						<th>Password</th> 
